@@ -1,5 +1,5 @@
 from Models.Birthdate import Birthdate
-from Models.ImageCreator import ImageCreator
+from Models.LifeCalendar import LifeCalendar
 
 #starting point of the application#
 #get the birthdate from input
@@ -10,8 +10,9 @@ try:
 except Exception as e:
     print("\n+++++++++++++++++++++++++++\n"+repr(e))
     print("Exit\n+++++++++++++++++++++++++++")
+    quit()
 
 #create the My life in weeks calendar
-imgCreator = ImageCreator(birthdate)
-imgCreator.createCalendar()
+lifeCalendar = LifeCalendar(birthdate)
+lifeCalendar.fillCalendar()
 

@@ -4,7 +4,7 @@ class Birthdate:
 
     def __init__(self, date):
         try:
-            self.date = self.checkFormat(date)
+            self.date: datetime = self.checkFormat(date)
         except:
             raise
 

@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 from PIL import Image
 
-im = Image.open('stinkbug.png')
+im = Image.open('Img\My life in weeks.png')
 
 # Create figure and axes
 fig, ax = plt.subplots()
