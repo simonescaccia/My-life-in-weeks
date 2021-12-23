@@ -1,4 +1,5 @@
 from datetime import date, datetime, timedelta
+import os
 from PIL import Image, ImageDraw, ImageFont
 import calendar
 from Models.Birthdate import Birthdate
@@ -15,7 +16,8 @@ class LifeCalendar:
     #width = 3508
     #height = 4961
 
-    pathnameImage = "Img\My life in weeks.png"
+    imageName = "My life in weeks.png"
+    pathnameImage = "Img\\" + imageName
     pathnameFont = "Fonts\CALIST.TTF"
 
     #misures in pixels
@@ -164,3 +166,7 @@ class LifeCalendar:
                     ), str(y), font=fnt, fill=(0, 0, 0))
         
         self.img.save(self.pathnameImage)
+
+    def saveToDesktop(self):
+        desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop') 
+        self.img.save(desktop + '\\' + self.imageName)

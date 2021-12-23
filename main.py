@@ -15,4 +15,5 @@ except Exception as e:
 #create the My life in weeks calendar
 lifeCalendar = LifeCalendar(birthdate)
 lifeCalendar.fillCalendar()
+lifeCalendar.saveToDesktop()
 
